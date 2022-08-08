@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    
+    <div class="cities">
+        <div class="cities__menu">
+            <div class="cities__search"><input type="text" class="cities__search-input" /></div>
+            <div class="cities__list">
+                <div class="cities__city">
+                    <div class="cities__city-code">12345</div>
+                    <div class="cities__city-name">Ривенделл</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">23456</div>
+                    <div class="cities__city-name">Шир</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">44351</div>
+                    <div class="cities__city-name">Минас Тирит</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">77842</div>
+                    <div class="cities__city-name">Кхазад-дум</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">77831</div>
+                    <div class="cities__city-name">Митлонд</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">11123</div>
+                    <div class="cities__city-name">Осгилиат</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">11183</div>
+                    <div class="cities__city-name">Рыбинск</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">12345</div>
+                    <div class="cities__city-name">Ривенделл</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">23456</div>
+                    <div class="cities__city-name">Шир</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">44351</div>
+                    <div class="cities__city-name">Минас Тирит</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">77842</div>
+                    <div class="cities__city-name">Кхазад-дум</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">77831</div>
+                    <div class="cities__city-name">Митлонд</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">11123</div>
+                    <div class="cities__city-name">Осгилиат</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">11183</div>
+                    <div class="cities__city-name">Рыбинск</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">12345</div>
+                    <div class="cities__city-name">Ривенделл</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">23456</div>
+                    <div class="cities__city-name">Шир</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">44351</div>
+                    <div class="cities__city-name">Минас Тирит</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">77842</div>
+                    <div class="cities__city-name">Кхазад-дум</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">77831</div>
+                    <div class="cities__city-name">Митлонд</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">11123</div>
+                    <div class="cities__city-name">Осгилиат</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">11183</div>
+                    <div class="cities__city-name">Рыбинск</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">12345</div>
+                    <div class="cities__city-name">Ривенделл</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">23456</div>
+                    <div class="cities__city-name">Шир</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">44351</div>
+                    <div class="cities__city-name">Минас Тирит</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">77842</div>
+                    <div class="cities__city-name">Кхазад-дум</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">77831</div>
+                    <div class="cities__city-name">Митлонд</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">11123</div>
+                    <div class="cities__city-name">Осгилиат</div>
+                </div>
+                <div class="cities__city">
+                    <div class="cities__city-code">11183</div>
+                    <div class="cities__city-name">Рыбинск</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.cities__search-input').addEventListener('input', (event) => {
+            const value = event.target.value;
+            let cityElements = document.querySelectorAll('.cities__city');
+            for (let i=0; i<cityElements.length; i++) {
+                const cityElement = cityElements[i]
+                if (value.length === 0) {
+                    cityElement.classList.remove('cities__city_ishidden')    
+                } else {
+                    if (cityElement.innerText.includes(value)) {
+                        cityElement.classList.remove('cities__city_ishidden')    
+                    } else {
+                        cityElement.classList.add('cities__city_ishidden')    
+                    }
+                }
+            }
+        })   
+    </script> 
+    
+</body>
+</html>
