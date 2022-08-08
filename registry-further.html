@@ -16,28 +16,56 @@
   <main class="wrapper">
     <section class="inner">
       <div class="top">
-        <a class="top__back-btn" href="registry.html">← Назад</a>
-        <h1 class="top__address">Город Чайковский / JR-JL0001</h1>
+        <a class="top__back-btn" href="registry.html">
+          <svg class="back-icon"><use xlink:href="#back-icon"></use></svg> Назад
+        </a>
+        <h1 class="top__address">город Чайковский / JR-JL0001</h1>
       </div>
-      <table class="journals">
-        <thead>
-          <tr>
-            <th></th>
-            <th class="journals__header">Название</th>
-            <th class="journals__header">Дата создания</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="journals__row">
-            <td class="journals__icon"><a class="row-link" href="images/journal.jpg">📄</a>
-            </td>
-            <td class="journals__name"><a class="row-link" tabindex="-1" href="images/journal.jpg">3035</a></td>
-            <td class="journals__date"><a class="row-link" tabindex="-1" href="images/journal.jpg">10.05.2022</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="journals-wrapper">
+        <table class="journals">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="journals__header">Название</th>
+              <th class="journals__header">Дата создания</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="journals__row">
+              <td class="journals__icon">
+                <a class="row-link" href="images/journal.jpg">
+                  <svg class="page-icon"><use xlink:href="#page-icon"></use></svg>
+                </a>
+              </td>
+              <td class="journals__name"><a class="row-link" tabindex="-1" href="images/journal.jpg">3035</a></td>
+              <td class="journals__date"><a class="row-link" tabindex="-1" href="images/journal.jpg">10.05.2022</a></td>
+            </tr>
+            <tr class="journals__row">
+              <td class="journals__icon">
+                <a class="row-link" href="images/journal.jpg">
+                  <svg class="page-icon"><use xlink:href="#page-icon"></use></svg>
+                </a>
+              </td>
+              <td class="journals__name"><a class="row-link" tabindex="-1" href="images/journal.jpg">3035</a></td>
+              <td class="journals__date"><a class="row-link" tabindex="-1" href="images/journal.jpg">10.05.2022</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
+
+  <svg style="display:none">
+    <symbol id="back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <defs></defs><title>Монтажная область 1</title><polygon class="back-icon-cls-1" points="24.3 4.81 21.59 2.1 10.41 13.29 10.4 13.29 7.7 16 7.7 16 7.7 16 10.4 18.71 10.41 18.71 21.59 29.9 24.3 27.19 13.12 16 24.3 4.81"/>
+    </symbol>
+    <symbol id="page-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <defs><style>.page-icon-cls-1{fill:#fff;stroke:#1d1d1b;stroke-miterlimit:10;stroke-width:2px;}.page-icon-cls-2{fill:#9d9d9c;}</style></defs><title>Монтажная область 1</title><polygon class="page-icon-cls-1" points="20.55 4.83 6.81 4.83 6.81 27.87 25.19 27.87 25.19 9.49 20.55 4.83"/><rect class="page-icon-cls-2" x="9.49" y="7.57" width="7.34" height="0.96"/><rect class="page-icon-cls-2" x="9.49" y="9.57" width="11.68" height="0.96"/><rect class="page-icon-cls-2" x="9.49" y="19.5" width="9.77" height="0.96"/><rect class="page-icon-cls-2" x="9.49" y="17.5" width="10.85" height="0.96"/><rect class="page-icon-cls-2" x="9.46" y="15.5" width="11.68" height="0.96"/><rect class="page-icon-cls-2" x="9.49" y="13.56" width="9.13" height="0.98"/><rect class="page-icon-cls-2" x="9.49" y="11.57" width="9.77" height="0.96"/><rect class="page-icon-cls-2" x="9.49" y="23.89" width="4.88" height="1.23"/>
+    </symbol>
+  </svg>
+
+  <script src="scripts/polyfills.js"></script>
+
 </body>
 
 </html>

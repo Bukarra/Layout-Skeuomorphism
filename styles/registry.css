@@ -33,6 +33,7 @@ body {
   content: '';
   position: absolute;
   width: 100%;
+  width: calc(100% - 35px); /* 35px ~= примерно ширина скроллбара */
   height: 100%;
   background: repeating-linear-gradient(#d02aff, 50%, #45ffd9 50% 100%);
   opacity: 0.4;
@@ -40,6 +41,10 @@ body {
   mix-blend-mode: color-burn;
   pointer-events: none;
   animation: drop 30s linear infinite;
+}
+
+.wrapper.wrapper_noglitch:before {
+  content: none;
 }
 
 @keyframes drop {
@@ -52,7 +57,30 @@ body {
   }
 }
 
+.back-icon {
+  fill: black;
+  position: relative;
+  top: 0.1em;
+  height: 0.8em;
+  width: 0.8em;
+}
+
+.journal-icon {
+  position: relative;
+  top: 0.1em;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.page-icon {
+  position: relative;
+  top: 0.1em;
+  height: 1.5em;
+  width: 1.5em;
+}
+
 .inner {
+  background-color: #fefefe;
   padding: 1rem;
   height: 100%;
 }
@@ -71,6 +99,14 @@ body {
   border-right: 1px solid grey;
 }
 
+.top__back-btn:hover {
+  color: #515ac8;
+}
+
+.top__back-btn:hover .back-icon {
+  fill: #515ac8;
+}
+
 .top__address {
   color: grey;
   border-top: 1px solid grey;
@@ -80,7 +116,8 @@ body {
   flex: 1 1 auto;
 }
 
-.table-wrapper {
+.journals-wrapper {
+  height: 100%;
   height: calc(100% - 1.9em);
   overflow-y: auto;
 }
@@ -122,11 +159,6 @@ body {
   padding: 0.4rem 1.2rem;
 }
 
-.row-link_icon {
-  display: block;
-  padding: 0 0.4rem;
-}
-
 .row-link:focus {
   outline: none;
 }
@@ -153,7 +185,7 @@ body {
     background-color: initial;
     position: static;
     aspect-ratio: auto;
-    height: auto;
+    height: 100%;
     overflow: auto;
     box-shadow: none;
   }
